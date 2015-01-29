@@ -1,0 +1,27 @@
+---
+layout: blog
+---
+<div class="wrapper wrapper-blog">
+
+  <h2 class="blog-header">Blog</h2>
+
+  <a href="./index.html">
+    <h3>Back to Home</h3>
+  </a>
+
+  <h1 style="margin-top: 40px">Coming Soon</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
+

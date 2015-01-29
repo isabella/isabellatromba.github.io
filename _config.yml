@@ -1,0 +1,11 @@
+# Site settings
+title: Isabella Tromba's Personal Site
+email: isabella.tromba@gmail.com
+description: > # this means to ignore newlines until "baseurl:" Isabella Tromba's personal website
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://isabellatromba.githubpages.io" # the base hostname & protocol for your site
+twitter_username: isabellatromba
+github_username: isabellatromba
+
+# Build settings
+markdown: kramdown

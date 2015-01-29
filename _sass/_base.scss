@@ -1,0 +1,178 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Basic styling
+ */
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrapper {
+  text-align:center;
+  max-width: 450px;
+  margin: 200px auto;
+}
+
+.wrapper-blog {
+  margin-top: 50px;
+}
+
+.color-animation {
+  background-image: -webkit-linear-gradient(91deg, $accent-color, $accent-color-2);
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+.icons {
+  font-size: 40px;
+}
+
+.bar {
+  background-color: $accent-color;
+  height: 5px;
+}
+
+.bar.blog {
+  background-image: -webkit-linear-gradient(91deg, $accent-color, $accent-color-2);
+  -webkit-filter: hue-rotate(-180deg);
+}
+
+i {
+  @extend .color-animation;
+  -webkit-background-clip: text;
+  color: $accent-color;
+  padding: 0 5px;
+}
+
+.name {
+  @extend .color-animation;
+  -webkit-background-clip: text;
+  color: $accent-color;
+  font-size: 50px;
+}
+
+.description {
+  font-weight: 400px;
+}
+
+.blog-header {
+  background-image: -webkit-linear-gradient(91deg, $accent-color, $accent-color-2);
+  -webkit-filter: hue-rotate(-180deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+}
+
+@-webkit-keyframes hue {
+  0% {-webkit-filter: hue-rotate(-20deg)}
+  20% {-webkit-filter: hue-rotate(-72deg)}
+  40% {-webkit-filter: hue-rotate(-144deg)}
+  60% {-webkit-filter: hue-rotate(-216deg)}
+  80% {-webkit-filter: hue-rotate(-144deg)}
+  94% {-webkit-filter: hue-rotate(-72deg)}
+  100% {-webkit-filter: hue-rotate(0deg)}
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200;
+}
+
+
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
+
+  &:hover {
+    color: lighten($brand-color, 15%);
+  }
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
